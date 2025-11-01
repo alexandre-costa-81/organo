@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { GeneroInterface, LivroInterface } from '../livro/livro.interface';
 import { livros } from '../../mock-livros';
+import { GeneroLiterario } from "../genero-literario/genero-literario";
 
 @Component({
   selector: 'app-lista-livros',
-  imports: [],
+  imports: [GeneroLiterario],
   templateUrl: './lista-livros.html',
   styleUrl: './lista-livros.css',
 })
@@ -50,8 +51,6 @@ export class ListaLivros implements OnInit {
       value: 'Técnicos',
       livros: this.livrosPorGenero.get("tecnicos") ?? []
     },
-   ]
-
-   console.log(this.livrosPorGenero);
+   ];
  }
 }
