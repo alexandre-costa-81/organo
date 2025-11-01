@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LivroInterface } from './livro.interface';
 
 @Component({
   selector: 'app-livro',
@@ -7,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './livro.css',
 })
 export class Livro {
-  livro = {
+  livro: LivroInterface = {
     titulo: 'O Alquimista',
     autoria: 'Paulo Coelho',
     favorito: false,
